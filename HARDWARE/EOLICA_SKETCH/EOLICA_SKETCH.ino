@@ -8,10 +8,10 @@ int rpm[4] = {0, 0, 0, 0};
 volatile float rev[4] = {0, 0, 0, 0};
 
 //MEGA
-int pins[] = {2, 3, 18, 19, 20, 21};
+//int pins[] = {2, 3, 18, 19, 20, 21};
 
 //MKR1000
-//int pins[] = {4, 5, 6, 7};
+int pins[] = {4, 5, 6, 7};
 
 // Interrupt Service Routines
 void isr0() //interrupt service routine
@@ -36,15 +36,14 @@ void (*isrs[4])() = {isr0, isr1, isr2, isr3};
 
 void setup() {
   Serial.begin(9600);
-
   attatch();
 }
 
 void loop() {
 
-  delay(100); // change delay to reduce signal interval
-
   detatch();
+
+  delay(100); // change delay to reduce signal interval
 
   ellapsedTime = millis() - oldTime; //finds the time
 
