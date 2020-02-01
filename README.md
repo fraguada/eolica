@@ -1,4 +1,7 @@
 # [eolica](http://instagram.com/_eolica_)
+
+![image](https://user-images.githubusercontent.com/1014562/73594945-22471380-4513-11ea-99d7-8c948444fa87.png)
+
 Code Repo for IAAC's LLUM 2020 instalation titled ["Eolica"](http://instagram.com/_eolica_)
 Instagram: [http://instagram.com/_eolica_](http://instagram.com/_eolica_)
 
