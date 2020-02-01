@@ -26,7 +26,9 @@ The Arduino code takes advantage of the MKR1000 four ISR enabled digital input p
 
 ## Hardware
 - Arduino MKR1000 (x2)
-- Pinwheels
+- Pinwheels (x8) with LM393 IR sensors to measure rotation
+- PixLite 16 MkII ECO Controller Board
+- SMD 5050 LED Module (x16 strip, 20 bulbs / strip)
 
 # Credits
 "Eolica" installation was developed by the 18-20 MAA02 students at the [Institute for Advanced Architecture of Catalonia](https://iaac.net) in Barcelona. The project was developed from October 2019 through February 2020 and presented at the LLUMBCN 2020 Festival February 14-16, 2020. 
