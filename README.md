@@ -11,6 +11,8 @@ The installation takes input from 8 custom fabricated pinwheels with embedded IR
 
 The Arduino code takes advantage of the MKR1000 four ISR enabled digital input pins for reading the RPMs of the pinwheels. This data is broadcast via UDP/OSC and received to a computer running Processing and Max/MSP.
 
+![image](https://user-images.githubusercontent.com/1014562/73595098-dac18700-4514-11ea-8b08-b89352a57f7f.png)
+
 ## Software
 - Arduino IDE
 - Arduino WIFI101 Library
