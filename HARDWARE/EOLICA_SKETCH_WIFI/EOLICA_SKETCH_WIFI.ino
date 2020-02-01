@@ -4,6 +4,8 @@
 #include <SPI.h>
 #include <WiFi101.h>
 #include <WiFiUdp.h>
+
+// uses the CMAT OSC library: https://github.com/CNMAT/OSC
 #include <OSCMessage.h>
 
 ///////please enter your sensitive data in the Secret tab/config.h
@@ -48,6 +50,7 @@ void (*isrs[4])() = {isr0, isr1, isr2, isr3};
 void setup() {
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
+  
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
@@ -59,7 +62,7 @@ void setup() {
     while (true);
   }
 
-  WiFi.config(localip);
+  //WiFi.config(localip);
 
   // attempt to connect to WiFi network:
   while ( status != WL_CONNECTED) {
@@ -82,11 +85,11 @@ void setup() {
 
   attatch();
 
-
 }
 
 void loop() {
 
+  // detatch ISRs
   detatch();
 
   ellapsedTime = millis() - oldTime; //finds the time
@@ -111,15 +114,15 @@ void loop() {
   oldTime = millis(); //saves the current time
 
   
-
   // send a message, to the IP address and port
   UDP.beginPacket(remoteip, remoteport);
   msg.send(UDP);
   UDP.endPacket();
   msg.empty();
 
-  delay(10);
+  delay(1);
 
+  // attatch ISRs
   attatch();
 
 }
