@@ -29,7 +29,7 @@ The Arduino code takes advantage of the MKR1000 four ISR enabled digital input p
 # Credits
 "Eolica" installation was developed by the 18-20 MAA02 students at the [Institute for Advanced Architecture of Catalonia](https://iaac.net) in Barcelona. The project was developed from October 2019 through February 2020 and presented at the LLUMBCN 2020 Festival February 14-16, 2020. 
 
-Project funding provided by the Institut de Cultura de Barcelona.
+Project funding provided by the [Institut de Cultura de Barcelona](https://www.barcelona.cat/barcelonacultura/es/icub).
 
 ## Physical Computing
 Surayyn Selvan, Anton Koshelev, Ivan Marchuk, Yimeng Wei, Ankita Alessandra Bob, Aysel Abasova, Manan Jain
