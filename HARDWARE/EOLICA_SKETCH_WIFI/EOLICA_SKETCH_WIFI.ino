@@ -12,8 +12,7 @@ char ssid[] = SECRET_SSID;        // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 int status = WL_IDLE_STATUS;     // the WiFi radio's status
 
-WiFiUDP Udp;
-
+WiFiUDP UDP;
 
 // variables for calculating RPMS
 int oldTime = 0;
@@ -79,7 +78,7 @@ void setup() {
   printCurrentNet();
   printWiFiData();
 
-  Udp.begin(localport);
+  UDP.begin(localport);
 
   attatch();
 
@@ -114,9 +113,9 @@ void loop() {
   
 
   // send a message, to the IP address and port
-  Udp.beginPacket(remoteip, remoteport);
-  msg.send(Udp);
-  Udp.endPacket();
+  UDP.beginPacket(remoteip, remoteport);
+  msg.send(UDP);
+  UDP.endPacket();
   msg.empty();
 
   delay(10);
@@ -127,7 +126,7 @@ void loop() {
 
 void attatch() {
   for (int i = 0; i < 4; i++)
-    attachInterrupt(digitalPinToInterrupt(pins[i]), isrs[i], RISING); //attaching the interrupt, MKR1000 ( 4, 5, 6 & 7 ONLY )
+    attachInterrupt(digitalPinToInterrupt(pins[i]), isrs[i], RISING); //attaching the interrupt
 }
 
 void detatch() {
